@@ -1,0 +1,80 @@
+.containing
+    width: 100%
+    height: 100vh
+    background-color: #181818 !important
+    display: flex
+    .test1
+        width: 60%
+        height: 100%
+    .test2
+        width: 30%
+        height: 100%
+
+    .sidebar
+        width: 20%
+        height: 100%
+        border-right: 3px solid indigo
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-evenly
+
+        .logo
+            height: 15%
+            width: 90%
+            display: flex
+            align-items: center
+            justify-content: center
+            background: linear-gradient(to right, purple, indigo)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            border-bottom: 1px solid indigo
+            border-width: 50%
+
+        .menuoption,
+        .setting-pannel
+            height: 50%
+            width: 90%
+            border-bottom: 1px solid indigo
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
+
+            .option
+                height: 14%
+                width: 100%
+                display: flex
+                color: white
+                align-items: center
+                justify-content: space-around
+                transition: 5s
+                cursor: pointer
+                &:hover
+                    background: linear-gradient(to right, purple, indigo)
+
+                h4
+                    width: 70%
+                    display: flex
+                    align-items: center
+                    text-transform: capitalize
+                .HomeIcon
+                    display: flex
+                    align-items: center
+                    margin-bottom: 1vh
+                    font-size: 1.1vw
+            .activated-option
+                background: linear-gradient(to right, purple, indigo)
+                .HomeIcon
+                    color: indigo
+                    display: flex
+                    align-items: center
+                    margin-bottom: 1vh
+                    font-size: 1.4vw
+        .setting-pannel
+            height: 25%
+            width: 90%
+            border-bottom: 1px solid indigo
+            .option
+                height: 28%
+                width: 90%

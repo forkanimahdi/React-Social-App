@@ -1,0 +1,117 @@
+body
+    margin: 0
+    padding: 0
+    .style
+        width: 50vw
+        height: 50vh
+        background-image: linear-gradient(to right ,white , indigo) !important
+        right: -20%
+        top: -30%
+        transform: rotateZ(190deg)
+
+    .singup
+        height: 100vh
+        background-image: linear-gradient(to right ,black , indigo) !important
+        overflow-y: hidden
+        .leftside
+            width: 60%
+            height: 100%
+            .hero
+                width: 80%
+
+            h4
+                color: #511469 !important
+                text-shadow: 1px 1px 1px white
+            .btns
+                width: 100%
+                height: 10%
+                button
+                    width: 20%
+                    height: 80%
+                    background-color: #511469
+                    color: #511469
+                    border: 3px solid purple
+                    &:hover
+                        background-color: #330d42 !important
+                        border: 3px solid white !important
+
+                        color: white
+
+            .credit
+                height: 10vh
+                width: 100%
+                color: white
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .footer
+                    width: 25%
+                    height: 80%
+                    font-size: 1.3vw
+                    color: white
+                    display: flex
+                    align-items: center
+                    justify-content: space-around
+
+                    img
+                        width: 20%
+
+        .formulaire
+            background-color: #0000004b
+            animation: backgrounds 2s ease backwards infinite alternate
+            background: linear-gradient(135deg ,#000 ,indigo)
+            transition: 0.5s
+            width: 30%
+            height: 80%
+            border-radius: 30px
+            overflow: hidden
+            padding: 20px
+            box-shadow: 8px 5px 4px 0px black
+            border: 1px solid white
+            @keyframes backgrounds
+                100%
+                    filter: hue-rotate(15deg)
+            .signupDiv,
+            .loginDiv
+                width: 100%
+                height: 90%
+                transition: 1s
+
+            input
+                width: 90%
+                margin-left: 5%
+                height: 10%
+                text-align: center
+                border-radius: 50px
+                background-color: transparent
+                font-size: 1.2vw
+                color: #d6d0d0
+                margin-top: 1vh
+                border: 2px solid wheat
+                &::placeholder
+                    color: #a8a5a5
+                    font-size: 1vw
+            label
+                color: white
+                padding: 0.5vw
+                font-size: 1vw
+                margin-left: 5%
+            p
+                font-size: 1vw
+                span
+                    color: #dd86ff
+                    margin-left: 1vw
+                    text-decoration: underline
+                    padding: 3px
+                    cursor: pointer
+                    &:hover
+                        color: white
+
+            .submit
+                background-color: #511469
+                transition: 0.5s
+                &:hover
+                    background-color: #e0dada
+                    color: #511469
+                    border: 1px solid #511469

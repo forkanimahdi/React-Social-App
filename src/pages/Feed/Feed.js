@@ -1,13 +1,13 @@
-import React from 'react';
+import { Sidebar } from "../../components/component2/component2"
 
+export const Feed = () => {
 
-// import '../../styles/Signup.sass'
-
-export function Feed() {
     return (
         <>
-            <h1 className='text-white'>hello</h1>
+            <Sidebar />
         </>
-    );
-}
 
+
+
+    )
+}
