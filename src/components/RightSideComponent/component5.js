@@ -6,6 +6,9 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 export const RightSideBar = () => {
 
 
+
+
+
     return (
         <>
             <div className="containing">

@@ -121,6 +121,9 @@ export const LeftSidebar = () => {
                         </div>
 
                     </div>
+                    <div className="copyright">
+                        <div className="text-white">&copy; All right reserved to Forkani</div>
+                    </div>
 
                 </div>
 

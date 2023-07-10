@@ -4,7 +4,7 @@ import myLogo from '../../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-export const Component1 = () => {
+export const Component1 = (props) => {
     let [login, setLogin] = useState(false)
     let [singup, setSignup] = useState(true)
     let [singupUsername, setSingupUsername] = useState('')
@@ -16,6 +16,7 @@ export const Component1 = () => {
     let [loginEmail, setLoginEmail] = useState('')
     let [loginPassword, setLoginPassword] = useState('')
     const navigate = useNavigate()
+
 
 
     const SingupLogin = (active, desactive) => {
@@ -36,7 +37,6 @@ export const Component1 = () => {
                 if (singupPassword.length >= 8) {
                     let user = new Users(singupUsername, singupEmail, singupPassword)
                     setUsers([...users, user])
-                    console.log(users);
                     setError("Account created successfuly")
                     setSingupUsername("")
                     setSingupEmail('')
@@ -77,6 +77,15 @@ export const Component1 = () => {
             const element = users[index];
             if (loginEmail === element.email) {
                 if (loginPassword === element.password) {
+                    let newUseronline = {
+                        username: element.username,
+                        userEmail: element.email,
+                        userPassword: element.password
+                    }
+
+                    props.setOnlineUser({...props.onlineUser , newUseronline})
+
+
                     navigate('./feed')
                 } else {
                     setError("Password Incorrect ")
