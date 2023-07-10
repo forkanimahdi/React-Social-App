@@ -1,10 +1,11 @@
-import { Sidebar } from "../../components/component2/component2"
+import { RightSideBar } from "../../components/RightSideComponent/component5"
 
 export const Feed = () => {
 
     return (
         <>
-            <Sidebar />
+            <RightSideBar />
+
         </>
 
 

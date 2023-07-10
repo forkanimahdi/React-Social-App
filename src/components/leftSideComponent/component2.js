@@ -3,7 +3,7 @@ import './component2.sass';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
-export const Sidebar = () => {
+export const LeftSidebar = () => {
 
     let [activeHome, setActiveHome] = useState(false)
     let [activeNotification, setActiveNotification] = useState(false)
@@ -32,9 +32,8 @@ export const Sidebar = () => {
     return (
 
         <>
-            <div className="containing">
 
-                <div className="sidebar">
+                <div className="leftsidebar">
                     <div className="logo">
                         <h1>INAKROF</h1>
                     </div>
@@ -123,33 +122,7 @@ export const Sidebar = () => {
 
                     </div>
 
-
-
-
-
-
-
-
-
-
-
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div className="test1"></div>
-                <div className="test2"></div>
-            </div>
 
         </>
 

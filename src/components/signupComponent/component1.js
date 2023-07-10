@@ -1,4 +1,4 @@
-import '../component1/component1.sass'
+import '../signupComponent/component1.sass'
 import myImage from '../../assets/connected people.png';
 import myLogo from '../../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
