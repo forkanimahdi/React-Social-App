@@ -6,7 +6,12 @@ import { Feed } from './pages/Feed/Feed';
 export function App() {
 
 
-  let [onlineUser, setOnlineUser] = useState({})
+  let [onlineUser, setOnlineUser] = useState({
+    username: "",
+    userEmail: "",
+    userPassword: ""
+    })
+
 
 
 

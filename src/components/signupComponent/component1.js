@@ -30,6 +30,8 @@ export const Component1 = (props) => {
             this.password = password
         }
     }
+    let testUser = new Users('admin', 'admin', 'admin')
+    users.push(testUser)
 
     const Registring = () => {
         if (singupUsername !== '' && singupEmail !== "" && singupPassword !== "" && singupPassword === signupConfirm) {
@@ -82,9 +84,7 @@ export const Component1 = (props) => {
                         userEmail: element.email,
                         userPassword: element.password
                     }
-
-                    props.setOnlineUser({...props.onlineUser , newUseronline})
-
+                    props.setOnlineUser(newUseronline)
 
                     navigate('./feed')
                 } else {
