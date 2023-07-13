@@ -1,10 +1,10 @@
-import '../signupComponent/component1.sass'
-import myImage from '../../assets/connected people.png';
-import myLogo from '../../assets/logo.png';
+import './signupComponent.sass'
+import myImage from '../../../assets/connected people.png';
+import myLogo from '../../../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-export const Component1 = (props) => {
+export const SignupComponent = (props) => {
     let [login, setLogin] = useState(false)
     let [singup, setSignup] = useState(true)
     let [singupUsername, setSingupUsername] = useState('')
@@ -86,7 +86,7 @@ export const Component1 = (props) => {
                     }
                     props.setOnlineUser(newUseronline)
 
-                    navigate('./feed')
+                    navigate('./Home')
                 } else {
                     setError("Password Incorrect ")
                     setTimeout(() => {

@@ -1,7 +1,7 @@
-import { LeftSidebar } from '../leftSideComponent/component2';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './component5.sass';
+import './RightSideBar.sass';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { LeftSidebar } from '../leftSideComponent/LeftSideBar';
 
 export const RightSideBar = () => {
 
@@ -31,8 +31,8 @@ export const RightSideBar = () => {
                     </div>
 
                     <div className="populair-creator">
+                        <h5 className="ppch">Suggested creators</h5>
 
-                        
                     </div>
 
 

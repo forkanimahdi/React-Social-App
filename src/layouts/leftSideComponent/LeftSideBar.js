@@ -1,5 +1,5 @@
 import { faBell, faChartSimple, faCompass, faFilm, faGear, faHouse, faPowerOff, faUser, faUserGroup } from '@fortawesome/free-solid-svg-icons';
-import './component2.sass';
+import './LeftSideBar.sass';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
