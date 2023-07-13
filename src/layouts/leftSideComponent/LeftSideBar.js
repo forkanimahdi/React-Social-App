@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export const LeftSidebar = () => {
 
-    let [activeHome, setActiveHome] = useState(false)
+    let [activeHome, setActiveHome] = useState(true)
     let [activeNotification, setActiveNotification] = useState(false)
     let [activeFollowers, setActiveFollowers] = useState(false)
     let [activeDiscover, setActiveDiscover] = useState(false)

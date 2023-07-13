@@ -1,10 +1,4 @@
-.containing
-    width: 100%
-    height: 100vh
-    background-color: #18191A
-    display: flex
-    .home
-        width: 60%
+
     .rightsidebar
         width: 20%
         border-left: 3px solid indigo
@@ -55,3 +49,32 @@
             // background-color: red
             .ppch
                 color: white
+            .creator-div
+                height: 90%
+                width: 90%
+                // border: 1px solid white
+                overflow-y: auto
+                transition: 0.5s
+                .creator
+                    width: 100%
+                    height: 15%
+                    display: flex
+                    align-items: center
+                    border-bottom: 1px solid white
+                    &:hover
+                        background-color: #ffffff4d
+                        cursor: pointer
+                    img
+                        width: 18%
+                        height: 60%
+                        margin-left: 1vw
+                        border: 2px solid white
+
+                    .creator-info
+                        margin-left: 1vw
+                        .verified-active
+                            color: purple
+                        .verified-desactive
+                            display: none
+                        h6
+                            color: gray
