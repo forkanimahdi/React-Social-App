@@ -1,13 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './RightSideBar.sass';
-import { faCheck, faCheckCircle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { LeftSidebar } from '../leftSideComponent/LeftSideBar';
+import {faCheckCircle, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import MZ from "../../assets/MZ.jpg"
 import EM from "../../assets/EM.jpg"
 import Logo from "../../assets/logo.png"
 import JB from "../../assets/JB.jpeg"
 import JM from "../../assets/JM.jpg"
-import TH from "../../assets/TH.jfif"
 import SJ from "../../assets/SJ.jpg"
 
 

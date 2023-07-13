@@ -4,13 +4,14 @@ import "./Home.sass"
 import { HomeBody } from "./components/HomeComponent"
 export const Home = (props) => {
 
-
+    let onlineUser = props.onlineUser
+    let setOnlineUser = props.setOnlineUser
 
     return (
         <>
             <div className="homeContainer">
                 <LeftSidebar />
-                <HomeBody />
+                <HomeBody onlineUser={onlineUser} setOnlineUser={setOnlineUser} />
 
                 <RightSideBar />
             </div>
