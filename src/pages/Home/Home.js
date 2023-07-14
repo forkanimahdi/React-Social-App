@@ -12,7 +12,6 @@ export const Home = (props) => {
             <div className="homeContainer">
                 <LeftSidebar />
                 <HomeBody onlineUser={onlineUser} setOnlineUser={setOnlineUser} />
-
                 <RightSideBar />
             </div>
 

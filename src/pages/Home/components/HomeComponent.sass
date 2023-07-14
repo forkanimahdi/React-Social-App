@@ -1,5 +1,6 @@
 .homebody
     width: 60%
+    overflow-y: auto
     .home-welcoming-header
         height: 8%
         display: flex
@@ -8,11 +9,53 @@
     .posting-area
         height: 30%
         width: 90%
-        background-color: red
         border: 2px solid indigo
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
         border-radius: 20px
-    
-// useEffect(() => {
-//   const dayPeriod = hours < 12 ? 'morning' : hours < 18 ? 'afternoon' : 'evening';
-//   setDayPeriod(dayPeriod);
-// }, [hours]);
+        background-color: #ffffff18
+        .posting-area-header
+            width: 90%
+            height: 10%
+        textarea
+            width: 90%
+            height: 50%
+            border-radius: 0 50px 50px 50px
+            background-color: transparent
+            padding: 1vw
+            color: white
+            &::placeholder
+                color: white
+        .posting-pannel
+            width: 90%
+            height: 20%
+            .posting-parentdiv
+                &:hover
+                    cursor: pointer
+            .posting-options
+                width: 70%
+                height: 100%
+                input
+                    width: 10%
+                .pannel-icons
+                    color: purple
+
+            .posting-desactivated,
+            .posting-activated
+                cursor: default
+                width: 20%
+                height: 100%
+                color: white
+                border: 1px solid white
+                background-color: #5e3d7a8e
+            .posting-activated
+                background-color: indigo
+                cursor: pointer
+.posts
+    width: 90%
+    border-top: none
+    height: 1000vw
+.homebody::-webkit-scrollbar
+    display: none
