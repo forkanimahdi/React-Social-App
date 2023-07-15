@@ -18,7 +18,16 @@
         background-color: #ffffff18
         .posting-area-header
             width: 90%
-            height: 10%
+            height: 30%
+            display: flex
+            align-items: center
+            img
+                width: 10%
+                height: 90%
+                border: 2px solid purple
+                filter: brightness(0.8)
+            video
+                width: 10%
         textarea
             width: 90%
             height: 50%
@@ -28,6 +37,8 @@
             color: white
             &::placeholder
                 color: white
+            &::-webkit-scrollbar
+                display: none
         .posting-pannel
             width: 90%
             height: 20%
@@ -53,9 +64,82 @@
             .posting-activated
                 background-color: indigo
                 cursor: pointer
-.posts
-    width: 90%
-    border-top: none
-    height: 1000vw
+                &:hover
+                    background-color: #e4e1e1
+                    color: indigo
+                    border: 3px solid indigo
 .homebody::-webkit-scrollbar
     display: none
+.posts
+    width: 100%
+    border-top: none
+    height: 1000vw
+    .post
+        width: 90%
+        height: fit-content
+        // background-color: red
+        border-left: 2px solid indigo
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: -5px
+            height: 100%
+            width: 10px
+            background: linear-gradient(45deg, #ff00a9, #00f7ff)
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+            transform: skewX(-15deg)
+            z-index: -1
+
+        &::after
+            content: ""
+            position: absolute
+            top: 50%
+            left: 0px
+            transform: translate(-50%, -50%)
+            width: 20px
+            height: 20px
+            background-color: #18191A
+            border-radius: 50%
+            border: 2px solid indigo
+            z-index: 1
+        .post-header
+            height: 25%
+            img
+                width: 5%
+            .post-user
+                height: 100%
+                width: 70%
+                h6
+                    color: gray
+                .verified
+                    color: purple
+                .not-verified
+                    display: none
+            .posted-time
+                width: 25%
+                color: gray
+        .post-content
+            height: max-content
+            width: 85%
+            font-size: 1.1vw
+            img
+                width: 100%
+                margin-top: 1vh
+            video
+                width: 100%
+        .post-panel
+            height: 20%
+            width: 90%
+            .mini-post-pannel
+                // width: 20%
+                opacity: 0.5
+                color: gray
+                cursor: pointer
+                &:hover
+                    color: purple
+                    opacity: 1
+
+
+    
