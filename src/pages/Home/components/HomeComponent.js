@@ -57,7 +57,7 @@ export const HomeBody = (props) => {
     // * post in the posts Array
     const Post = (e) => {
         let textArea = e.parentElement.previousElementSibling
-        PostText =textArea.value
+        PostText = textArea.value
         PostText = PostText.charAt(0).toUpperCase() + PostText.slice(1)
         let thePost = {
             postContent: PostText,
@@ -70,6 +70,7 @@ export const HomeBody = (props) => {
         setPostText("")
         setPOstArray(copyOfPostArray)
         setActivingButton(false)
+        file = null
         setSelectedImage(null)
         setSelectedVideo(null)
         setActivingImageHeader(false)
@@ -88,19 +89,40 @@ export const HomeBody = (props) => {
         };
         reader.readAsDataURL(file);
     }
-    const uploadVideo = (e) => {
-        let textareaInput = e.target.parentElement.parentElement.parentElement.previousElementSibling
-        textareaInput.style.height = "30%"
-        setActivingImageHeader(true)
-        file = e.target.files[0];
-        console.log(file);
-        let reader = new FileReader();
-        reader.onload = () => {
-            setSelectedVideo(reader.result);
-        };
-        reader.readAsDataURL(file);
-    }
+    // const uploadVideo = (e) => {
+    //     let textareaInput = e.target.parentElement.parentElement.parentElement.previousElementSibling
+    //     textareaInput.style.height = "30%"
+    //     setActivingImageHeader(true)
+    //     file = e.target.files[0];
+    //     let reader = new FileReader();
+    //     reader.onload = () => {
+    //         setSelectedVideo(reader.result);
+    //     };
+    //     reader.readAsDataURL(file);
+    // }
 
+    const Like = (e) => {
+        let likingBtn = e.target
+        let likingDiv = likingBtn.parentElement
+        let viewCountDiv = likingDiv.parentElement.parentElement
+        let viewCountlastDiv = viewCountDiv.lastElementChild
+        let viewCountDivNumber = viewCountlastDiv.lastElementChild
+        let viewCountNumber = parseInt(viewCountDivNumber.textContent)
+        console.log(viewCountNumber);
+        let countingLikeDiv = likingDiv.parentElement.lastElementChild
+        let countingLikeNumber = parseInt(likingDiv.parentElement.lastElementChild.textContent)
+        if (!likingDiv.classList.contains("clicked-reaction")) {
+            likingDiv.classList.add("clicked-reaction")
+            viewCountDivNumber.textContent = viewCountNumber +1
+            countingLikeDiv.textContent = countingLikeNumber + 1;
+        } else {
+            likingDiv.classList.remove("clicked-reaction")
+            countingLikeDiv.textContent = countingLikeNumber - 1;
+        }
+
+
+
+    }
 
 
 
@@ -131,7 +153,7 @@ export const HomeBody = (props) => {
                                 <FontAwesomeIcon className='pannel-icons fs-4' icon={faImage} />
                             </div>
                             <div className="position-relative posting-parentdiv">
-                                <input className='position-absolute w-100 opacity-0 end-0' type="file" accept="video/mp4, video/webm, video/ogg" onChange={uploadVideo} />
+                                <input className='position-absolute w-100 opacity-0 end-0' type="file" accept="video/mp4, video/webm, video/ogg" />
                                 <FontAwesomeIcon className='pannel-icons fs-4' icon={faVideo} />
                             </div>
                             <div className="position-relative posting-parentdiv">
@@ -167,29 +189,25 @@ export const HomeBody = (props) => {
                                     <div className="post-content p-2 text-white ">
                                         {element.postContent}
                                         <img src={element.postImage} alt="" />
-                                        {/* <video src={element.postVideo} autoPlay></video> */}
+                                        {/* <video src={element.postVideo} controls autoPlay></video> */}
                                     </div>
                                     <div className="post-panel p-3 d-flex align-items-center justify-content-around fs-6">
                                         <div className="d-flex align-items-center justify-content-around mini-post-pannel like-pannel">
-                                            <FontAwesomeIcon icon={faHeart} />
-                                            <div className="like-number ms-1"></div>
+                                            <FontAwesomeIcon  onClick={(e) => {Like(e)}} icon={faHeart} />
+                                            <div className="like-number ms-2">0</div>
                                         </div>
                                         <div className="d-flex align-items-center justify-content-around mini-post-pannel comment-pannel">
                                             <FontAwesomeIcon icon={faComment} />
-                                            <div className="comment-number ms-1"></div>
+                                            <div className="comment-number ms-1">0</div>
                                         </div>
                                         <div className="d-flex align-items-center justify-content-around mini-post-pannel repost-pannel">
                                             <FontAwesomeIcon icon={faRetweet} />
-                                            <div className="repost-number ms-1"></div>
+                                            <div className="repost-number ms-1">0</div>
                                         </div>
                                         <div className="d-flex align-items-center justify-content-around mini-post-pannel views-pannel">
                                             <FontAwesomeIcon icon={faEye} />
                                             <div className="view-number ms-1">0</div>
 
-                                        </div>
-                                        <div className="d-flex align-items-center justify-content-around mini-post-pannel copy-pannel">
-                                            <FontAwesomeIcon icon={faClipboard} />
-                                            <div className="copy-text ms-1">copy</div>
                                         </div>
                                     </div>
                                 </div>
