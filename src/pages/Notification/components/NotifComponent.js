@@ -9,7 +9,12 @@ export const NotificationComponent = (props) => {
 
         <>
             <div className="notifbody">
+                <h3 className='text-center text-white p-3'>Notifications</h3>
 
+                <div className="notifsection">
+
+
+                </div>
 
             </div>
 

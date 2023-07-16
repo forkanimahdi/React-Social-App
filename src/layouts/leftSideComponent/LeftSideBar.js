@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export const LeftSidebar = () => {
+export const LeftSidebar = (props) => {
 
     let [activeHome, setActiveHome] = useState(false)
     let [activeNotification, setActiveNotification] = useState(false)
@@ -24,7 +24,7 @@ export const LeftSidebar = () => {
     let NotifPath = "/Notification"
 
 
-    const activing = (activated, desactivated, desactivated2, desactivated3, desactivated4, desactivated5, desactivated6, desactivated7, desactivated8, path) => {
+    const activing = (activated, desactivated, desactivated2, desactivated3, desactivated4, desactivated5, desactivated6, desactivated7, desactivated8, path, e) => {
         navigateTo(path)
         activated(true)
         desactivated(false)
@@ -48,16 +48,16 @@ export const LeftSidebar = () => {
                     <h1>INAKROF</h1>
                 </div>
                 <div className="menuoption container ">
-                    <div onClick={() => {
-                        activing(setActiveHome, setActiveNotification, setActiveFollowers, setActiveDiscover, setActiveVideo, setActiveTrend, setActiveSetting, setActiveProfile, setActiveLogout , HomePath)
+                    <div onClick={(e) => {
+                        activing(setActiveHome, setActiveNotification, setActiveFollowers, setActiveDiscover, setActiveVideo, setActiveTrend, setActiveSetting, setActiveProfile, setActiveLogout, HomePath, e)
                     }} className={activeHome === true ? "option activated-option rounded-pill" : "option rounded-pill"}>
                         <div className="HomeIcon">
                             <FontAwesomeIcon icon={faHouse} />
                         </div>
                         <h4 className="homeTittle">Home</h4>
                     </div>
-                    <div onClick={() => {
-                        activing(setActiveNotification, setActiveHome, setActiveFollowers, setActiveDiscover, setActiveVideo, setActiveTrend, setActiveSetting, setActiveProfile, setActiveLogout, NotifPath)
+                    <div onClick={(e) => {
+                        activing(setActiveNotification, setActiveHome, setActiveFollowers, setActiveDiscover, setActiveVideo, setActiveTrend, setActiveSetting, setActiveProfile, setActiveLogout, NotifPath, e)
                     }} className={activeNotification === true ? "option activated-option rounded-pill" : "option rounded-pill"}>
                         <div className="HomeIcon">
                             <FontAwesomeIcon icon={faBell} />
